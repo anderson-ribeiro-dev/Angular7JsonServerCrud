@@ -1,0 +1,107 @@
+<form class="needs-validation" novalidate [formGroup]="form" style="padding-top: 10px">
+  <div class="form-row">
+    <div class="col-sm-6">
+      <label for="nome">Nome do Curso</label>
+      <input type="text"
+        class="form-control"
+        id="nome"
+        placeholder="Nome do Curso"
+        formControlName="nome"
+        [ngClass]="{ 'is-invalid': submitted && hasError('nome')}"
+       />
+      <div class="invalid-feedback" *ngIf="hasError('nome') && hasError('nome')['required']" >
+        Por favor informe um nome para o curso.
+      </div>
+      <div class="invalid-feedback" *ngIf="hasError('nome') && hasError('nome')['minlength']" >
+        Nome precisa ter no mínimo {{ hasError('nome')['minlength'].requiredLength }} caracteres.
+      </div>
+      <div class="invalid-feedback" *ngIf="hasError('nome') && hasError('nome')['maxlength']" >
+          Nome precisa ter no máximo {{ hasError('nome')['maxlength'].requiredLength }} caracteres
+      </div>
+    </div>
+    <!--modalidade-->
+    <div class="col-sm-6">
+      <label for="modalidade">Modalidade</label>
+      <input type="text"
+        class="form-control"
+        id="modalidade"
+        placeholder="Modalidade do Curso"
+        formControlName="modalidade"
+        [ngClass]="{ 'is-invalid': submitted && hasError('modalidade')}"
+       />
+      <div class="invalid-feedback" *ngIf="hasError('modalidade') && hasError('modalidade')['required']" >
+        Por favor informe um modalidade para o curso.
+      </div>
+      <!-- <div class="invalid-feedback" *ngIf="hasError('modalidade') && hasError('modalidade')['minlength']" >
+        Modalidade precisa ter no mínimo {{ hasError('modalidade')['minlength'].requiredLength }} caracteres.
+      </div>
+      <div class="invalid-feedback" *ngIf="hasError('modalidade') && hasError('nome')['maxlength']" >
+          Modalidade precisa ter no máximo {{ hasError('modalidade')['maxlength'].requiredLength }} caracteres
+      </div> -->
+    </div>
+    <!-- quantidades de horas -->
+    <div class="col-sm-6">
+      <label for="qtdHrs">Quantidades de Horas</label>
+      <input type="text"
+        class="form-control"
+        id="qtdHrs"
+        placeholder="Quantidades de Horas"
+        formControlName="qtdHrs"
+        [ngClass]="{ 'is-invalid': submitted && hasError('qtdHrs')}"
+       />
+      <div class="invalid-feedback" *ngIf="hasError('qtdHrs') && hasError('qtdHrs')['required']" >
+        Por favor informe um quantidade de horas para o curso.
+      </div>
+      <!-- <div class="invalid-feedback" *ngIf="hasError('qtdHrs') && hasError('qtdHrs')['minlength']" >
+        Quantidades de horas precisa ter no mínimo {{ hasError('qtdHrs')['minlength'].requiredLength }} caracteres.
+      </div>
+      <div class="invalid-feedback" *ngIf="hasError('qtdHrs') && hasError('qtdHrs')['maxlength']" >
+          Quantidade de Horas precisa ter no máximo {{ hasError('qtdHrs')['maxlength'].requiredLength }} caracteres
+      </div> -->
+    </div>
+    <!-- professor -->
+    <div class="col-sm-6">
+      <label for="professor">Professor</label>
+      <input type="text"
+        class="form-control"
+        id="professor"
+        placeholder="Nome do Professor"
+        formControlName="professor"
+        [ngClass]="{ 'is-invalid': submitted && hasError('professor')}"
+       />
+      <div class="invalid-feedback" *ngIf="hasError('professor') && hasError('professor')['required']" >
+        Por favor informe o nome do professor.
+      </div>
+      <!-- <div class="invalid-feedback" *ngIf="hasError('professor') && hasError('professor')['minlength']" >
+        Nome professor precisa ter no mínimo {{ hasError('professor')['minlength'].requiredLength }} caracteres.
+      </div>
+      <div class="invalid-feedback" *ngIf="hasError('professor') && hasError('professor')['maxlength']" >
+          Nome professor precisa ter no máximo {{ hasError('professor')['maxlength'].requiredLength }} caracteres
+      </div> -->
+    </div>
+    <!--descrição-->
+    <div class="col-sm-12">
+      <label for="descricao">Descrição</label>
+      <textarea type="text"
+        class="form-control"
+        id="descricao"
+        placeholder="Descrição do Curso"
+        formControlName="descricao"
+        [ngClass]="{ 'is-invalid': submitted && hasError('descricao')}"
+       ></textarea>
+      <div class="invalid-feedback" *ngIf="hasError('descricao') && hasError('descricao')['required']" >
+        Por favor informe a descrição do curso.
+      </div>
+      <!-- <div class="invalid-feedback" *ngIf="hasError('descricao') && hasError('descricao')['minlength']" >
+        Descrição precisa ter no mínimo {{ hasError('descricao')['minlength'].requiredLength }} caracteres.
+      </div>
+      <div class="invalid-feedback" *ngIf="hasError('descricao') && hasError('descricao')['maxlength']" >
+          Descrição precisa ter no máximo {{ hasError('descricao')['maxlength'].requiredLength }} caracteres
+      </div> -->
+    </div>
+  </div>
+  <div style="margin-top: 15px">
+    <button type="submit" class="btn btn-primary" (click)="onSubmit()" >Salvar</button>
+    <button type="button" class="btn btn-default" (click)="onCancel()" >Cancelar</button>
+  </div>
+</form>

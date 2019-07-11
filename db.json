@@ -1,0 +1,28 @@
+{
+  "cursos": [
+    {
+      "id": 1,
+      "nome": "Angular*",
+      "modalidade": "EAD*",
+      "qtdHrs": "15hrs*",
+      "professor": "professor*",
+      "descricao": "Java Scripts*"
+    },
+    {
+      "id": 2,
+      "nome": "PHP**",
+      "modalidade": "EAD**",
+      "qtdHrs": "14hrs**",
+      "professor": "Antonio**",
+      "descricao": "POO**"
+    },
+    {
+      "id": 3,
+      "nome": "JAVA*",
+      "modalidade": "Presencial*",
+      "qtdHrs": "14horas*",
+      "professor": "Lucas*",
+      "descricao": "Java OO*"
+    }
+  ]
+}
